@@ -1,0 +1,43 @@
+<div class="header">
+  <div class="resize-handle"></div>
+  <span class="title">Translaty</span>
+  <div class="button-group">
+    <span class="loading-indicator"></span>
+    <button class="minimize">-</button>
+    <button class="close">×</button>
+  </div>
+</div>
+<div class="tabs">
+  <button class="tab active" data-tab="current">Translation</button>
+  <button class="tab" data-tab="history">History</button>
+  <button class="tab" data-tab="settings">Settings</button>
+</div>
+<div class="content">
+  <div class="tab-content current active">
+    <h3>Latest Translation</h3>
+    <img class="original-image" src="" alt="Original Image/Meme" style="max-width: 100%; display: block; margin-bottom: 10px;">
+    <p class="translation">Translation: No recent translation.</p>
+  </div>
+  <div class="tab-content history">
+    <h3>History</h3>
+    <ul class="history-list"></ul>
+  </div>
+  <div class="tab-content settings">
+    <h3>Settings</h3>
+    <label for="mode-select">Translation Mode:</label>
+    <select id="mode-select"></select>
+    <div id="custom-fields" style="display: none; margin-top: 10px;">
+      <label for="custom-prompt">Custom Prompt Template (use {language}):</label>
+      <textarea id="custom-prompt" rows="4" style="width: 100%;"></textarea>
+      <label for="custom-temperature">Temperature (0-2):</label>
+      <input type="number" id="custom-temperature" min="0" max="2" step="0.1">
+      <label for="custom-topk">TopK (1-128):</label>
+      <input type="number" id="custom-topk" min="1" max="128">
+    </div>
+    <label for="language-select">Target Language:</label>
+    <select id="language-select"></select>
+    <button id="clear-history" style="margin-top: 10px;">Clear History</button>
+    <button id="copy-history" style="margin-top: 10px;">Copy History to Clipboard</button>
+    <button id="open-popup" style="margin-top: 10px;">Open in Popup</button>
+  </div>
+</div>
