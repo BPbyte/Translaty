@@ -53,10 +53,10 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
     if (msg.action === 'perform-translation') {
       performTranslation(msg.text).then(() => sendResponse({ status: 'Done' }));
-      return true; // Async response
+      return true; 
     } else if (msg.action === 'perform-image-translation') {
       performImageTranslation(msg.imageUrl).then(() => sendResponse({ status: 'Done' }));
-      return true; // Async response
+      return true; 
     } else if (msg.action === 'showPanel') {
       if (window.updatePanel) {
         window.updatePanel({});
@@ -166,7 +166,7 @@ async function performImageTranslation(imageUrl) {
     const responseBlob = await fetch(imageResponse).then(res => res.blob());
     const imageFile = new File([responseBlob], 'image.png', { type: responseBlob.type || 'image/png' });
 
-    // Create multimodal session
+  
     const visionSession = await LanguageModel.create({
       expectedInputs: [{ type: 'image' }],
       expectedOutputs: [{ type: 'text', languages: [langCode] }],
@@ -228,4 +228,5 @@ async function performImageTranslation(imageUrl) {
   } finally {
     window.toggleLoading(false);
   }
+
 }
