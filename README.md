@@ -14,7 +14,7 @@ Translaty is a Chrome browser extension that provides context-aware text and ima
 
 ## Installation -Used Chrome Canary for Development
 ### Option 1: Load Unpacked Extension (Recommended for Development)
-1. Clone the repository: `git clone <repo-url>`
+1. Clone the repository: `git clone (https://github.com/BPbyte/Translaty)`
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" (top-right toggle)
 4. Click "Load unpacked" and select the `src/` folder in the repository
